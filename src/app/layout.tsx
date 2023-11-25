@@ -3,6 +3,7 @@ import "./globals.css";
 import { inter } from "@/lib/fonts";
 
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 	return (
 		<ClerkProvider>
 			<html lang="en" suppressHydrationWarning>
-				<body className={`${inter.className}  overflow-x-hidden px-4`}>
+				<body className={`${inter.className} relative overflow-x-hidden`}>
 					<ThemeProvider attribute="class" defaultTheme="dark">
 						{children}
 					</ThemeProvider>

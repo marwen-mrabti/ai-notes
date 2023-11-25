@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { Trash } from "lucide-react";
 
 const DeleteNote = ({ noteId }: { noteId: string }) => {
 	const router = useRouter();
@@ -46,7 +47,10 @@ const DeleteNote = ({ noteId }: { noteId: string }) => {
 						processing <span className="loading loading-dots">...</span>
 					</>
 				) : (
-					"Delete"
+					<div className="flex items-center gap-1">
+						<Trash className="h-6 w-6" />
+						Delete
+					</div>
 				)}
 			</Button>
 		</div>

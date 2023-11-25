@@ -12,7 +12,7 @@ const ThemeToggler = () => {
 				<input
 					type="checkbox"
 					checked={theme === "dark"}
-					className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1 bg-indigo-600/60"
+					className="theme-controller toggle col-span-2 col-start-1 row-start-1 bg-base-content bg-indigo-600/60"
 					onChange={(e) => {
 						setTheme(e.target.checked ? "dark" : "light");
 					}}
@@ -22,14 +22,15 @@ const ThemeToggler = () => {
 					key="sun-icon"
 					width="14"
 					height="14"
-					className="stroke-base-100 fill-base-100 col-start-1 row-start-1"
+					className="col-start-1 row-start-1 fill-base-100 stroke-base-100"
 				/>
 				<Moon
 					key="moon-icon"
 					width="14"
 					height="14"
-					className="stroke-base-100 fill-base-100 col-start-2 row-start-1"
+					className="col-start-2 row-start-1 fill-base-100 stroke-base-100"
 				/>
+				<span className="sr-only">theme toggler</span>
 			</label>
 		</div>
 	);

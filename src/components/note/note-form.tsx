@@ -1,22 +1,13 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, useForm } from "react-hook-form";
-import {
-	Form,
-	FormControl,
-	FormDescription,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage
-} from "../ui/form";
+import { useForm } from "react-hook-form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { TCreateNote, TNote, createNoteSchema } from "@/lib/z.schemas";
 import { Button } from "../ui/button";
 import { DialogClose, DialogFooter } from "../ui/dialog";
-import { delay } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 
 type TNoteFormProps = {
