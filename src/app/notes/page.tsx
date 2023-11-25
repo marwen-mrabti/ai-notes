@@ -25,7 +25,7 @@ export default async function NotesPage() {
 		return (
 			<div className="flex flex-col items-center justify-start">
 				<h2 className="flex text-xl text-emerald-200">
-					you don't have any notes yet. do you like to create one ?{" "}
+					you don&apos;t have any notes yet. do you like to create one ?
 					<ArrowUp className="scale-0 lg:scale-100" />
 				</h2>
 			</div>

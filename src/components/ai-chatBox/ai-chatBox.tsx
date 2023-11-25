@@ -57,7 +57,6 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
 					{isLoading && lastMessageIsUser && (
 						<ChatMessage
 							message={{
-								id: "loading",
 								role: "assistant",
 								content: "Thinking..."
 							}}
@@ -66,7 +65,6 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
 					{error && (
 						<ChatMessage
 							message={{
-								id: "error",
 								role: "assistant",
 								content: "Something went wrong. Please try again."
 							}}
@@ -103,7 +101,11 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
 	);
 }
 
-const ChatMessage = ({ message: { role, content } }: { message: Message }) => {
+const ChatMessage = ({
+	message: { role, content }
+}: {
+	message: Pick<Message, "role" | "content">;
+}) => {
 	const { user } = useUser();
 	const isAiMessage = role === "assistant";
 
