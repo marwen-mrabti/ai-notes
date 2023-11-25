@@ -52,13 +52,13 @@ export const NoteForm = ({ setOpen, note }: TNoteFormProps) => {
 					throw new Error("Something went wrong!");
 				}
 			}
-
+		} catch (error: any) {
+			console.log(error.message);
+			alert("Something went wrong!Couldn't create note. Please try again later.");
+		} finally {
 			form.reset();
 			router.refresh();
 			setOpen(false);
-		} catch (error: any) {
-			console.log(error.message);
-			alert("Something went wrong!Couldn't delete note. Please try again later.");
 		}
 	};
 

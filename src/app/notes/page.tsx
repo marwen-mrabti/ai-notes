@@ -3,6 +3,7 @@ import NotesFallbackSkeleton from "@/components/note/note-skeleton";
 import { fetchNotes } from "@/lib/data";
 import { TNote } from "@/lib/z.schemas";
 import { auth } from "@clerk/nextjs";
+import { ArrowUp } from "lucide-react";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
@@ -19,6 +20,17 @@ export default async function NotesPage() {
 	}
 
 	const notes = await fetchNotes(userId);
+
+	if (!notes.length) {
+		return (
+			<div className="flex flex-col items-center justify-start">
+				<h2 className="flex text-xl text-emerald-200">
+					you don't have any notes yet. do you like to create one ?{" "}
+					<ArrowUp className="scale-0 lg:scale-100" />
+				</h2>
+			</div>
+		);
+	}
 
 	return (
 		<div className="mx-auto max-w-7xl">

@@ -1,11 +1,10 @@
 import { stylish } from "@/lib/fonts";
 import ThemeToggler from "../theme-provider/theme-toggler";
-import { Button } from "../ui/button";
-import { Bot } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { NoteDialog } from "../note/note-modal";
+import ChatBtn from "../ai-chatBox/chat-btn";
 import ThemedUserButton from "./user-button";
 
 const Navbar = () => {
@@ -32,10 +31,7 @@ const Navbar = () => {
 			<nav className="flex w-full flex-col items-start gap-3  px-4 md:w-fit md:flex-row md:items-center md:space-x-10">
 				<div className="flex w-full items-center justify-between gap-6 ">
 					<NoteDialog type="add" />
-					<Button className="space-x-2 bg-slate-950 capitalize text-slate-50 transition-all duration-150 hover:opacity-95 dark:bg-slate-100 dark:text-slate-900">
-						<Bot />
-						<span>AI Chat</span>
-					</Button>
+					<ChatBtn />
 				</div>
 
 				<div className="flex w-full items-center justify-between gap-6 ">
