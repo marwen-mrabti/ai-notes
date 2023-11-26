@@ -2,8 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import { useChat } from "ai/react";
-import { Bot, Send, Trash, XCircle } from "lucide-react";
-import { Textarea } from "../ui/textarea";
+import { Bot, Trash, XCircle } from "lucide-react";
+
 import { Button } from "../ui/button";
 import { Message } from "ai";
 import { useUser } from "@clerk/nextjs";
