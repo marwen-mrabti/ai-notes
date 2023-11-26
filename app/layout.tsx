@@ -3,7 +3,6 @@ import "./globals.css";
 import { inter } from "@/lib/fonts";
 
 import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 
 export const metadata: Metadata = {
