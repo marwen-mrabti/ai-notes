@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 	title: "aiNotes",
 	description: "aiNotes is a note taking app with AI features"
 };
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<ClerkProvider>

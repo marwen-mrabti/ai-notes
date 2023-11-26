@@ -38,10 +38,7 @@ export async function POST(req: Request) {
 				"you are an intelligent note taking app. you answer user's questions based on their existing notes. " +
 				"the relevant notes are: " +
 				relevantNotes
-					.map(
-						(note: { title: string; content?: string }) =>
-							`Title:${note.title}\n\nContent:\n${note.content}`
-					)
+					.map((note) => `Title:${note.title}\n\nContent:\n${note.content}`)
 					.join("\n\n") +
 				"."
 		};

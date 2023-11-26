@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-export default function Home() {
+function HomePage() {
 	const { userId } = auth();
 
 	if (userId) {
@@ -46,3 +46,5 @@ export default function Home() {
 		</main>
 	);
 }
+
+export default HomePage;

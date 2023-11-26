@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 export default function NotesFallbackSkeleton() {
 	return (
-		<ul className="mx-auto grid w-full grid-cols-1  gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+		<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
 			{Array.from({ length: 3 }).map((_, i) => (
-				<li key={i} className=" ">
+				<li key={i} className="mx-auto w-[90%] ">
 					<NoteSkeleton />
 				</li>
 			))}
@@ -17,7 +17,7 @@ export default function NotesFallbackSkeleton() {
 
 function NoteSkeleton() {
 	return (
-		<Card className="col-span-1 mx-auto flex  w-full flex-col justify-between md:min-h-[45dvh] md:w-3/4 ">
+		<Card className="mx-auto flex h-fit w-full flex-col justify-between md:min-h-[45dvh] ">
 			<>
 				<CardHeader>
 					<CardTitle>
@@ -27,9 +27,9 @@ function NoteSkeleton() {
 				</CardHeader>
 
 				<CardContent className="space-y-2">
-					<Skeleton className="h-4 w-64" />
-					<Skeleton className="h-4 w-64" />
-					<Skeleton className="h-4 w-64" />
+					<Skeleton className="h-4 w-48" />
+					<Skeleton className="h-4 w-48" />
+					<Skeleton className="h-4 w-48" />
 				</CardContent>
 			</>
 
